@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f0e0d6"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/employeeName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="96dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        android:text="Employee Name"
+        android:textColor="#8c593b"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/employeeHours"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        android:minHeight="48dp"
+        android:text="Hours Rendered"
+        android:textColor="#8c593b"
+        android:textStyle="bold"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="@+id/employeeType"
+        app:layout_constraintStart_toStartOf="@+id/employeeType"
+        app:layout_constraintTop_toBottomOf="@+id/employeeType" />
+
+    <RadioGroup
+        android:id="@+id/employeeType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="68dp"
+        app:layout_constraintEnd_toEndOf="@+id/employeeName"
+        app:layout_constraintStart_toStartOf="@+id/employeeName"
+        app:layout_constraintTop_toBottomOf="@+id/employeeName" >
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#8c593b"
+            android:textStyle="bold"
+            android:textSize="20dp"
+            android:text="Employee Type: " />
+
+        <RadioButton
+            android:id="@+id/btnRegular"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#d9ac84"
+            android:textStyle="bold"
+            android:textSize="20dp"
+            android:text="Regular Employee" />
+
+        <RadioButton
+            android:id="@+id/btnPartTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#d9ac84"
+            android:textStyle="bold"
+            android:textSize="20dp"
+            android:text="Part-Time Worker" />
+
+        <RadioButton
+            android:id="@+id/btnProbationary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#d9ac84"
+            android:textStyle="bold"
+            android:textSize="20dp"
+            android:text="Probationary Employee" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/btnCalculate"
+        android:layout_width="132dp"
+        android:layout_height="63dp"
+        android:layout_marginTop="48dp"
+        android:backgroundTint="#d9ac84"
+        android:text="Calculate"
+        android:textColor="#8c593b"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/employeeHours"
+        app:layout_constraintStart_toStartOf="@+id/employeeHours"
+        app:layout_constraintTop_toBottomOf="@+id/employeeHours" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
